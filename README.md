@@ -1,58 +1,100 @@
-# React Template 19 ⚡
+# Welcome to React Router!
 
-<div align="center">
-  <img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" alt="React 19" />
-  <img src="https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript" alt="TypeScript" />
-</div>
+A modern, production-ready template for building full-stack React applications using React Router.
 
-<br />
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-A modern React template powered by React 19, featuring a collection of powerful tools and utilities for rapid development.
+## Features
 
-## ✨ Features
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
 
-<div align="left">
+## Getting Started
 
-### 🚀 React 19
-Latest React features including concurrent rendering and improved performance
-<br />
+### Installation
 
-### 🛣️ Page Generation & Routing
-Automatic route generation based on file structure for seamless navigation
-<br />
-
-### 📦 Auto Import
-Smart auto-import functionality for components and utilities
-<br />
-
-### 🎨 Tailwind CSS
-Utility-first CSS framework for rapid UI development
-<br />
-
-### 🎯 Shadcn/ui
-Beautiful and accessible UI components built with Radix UI and Tailwind
-<br />
-
-</div>
-
-## 🚀 Getting Started
+Install the dependencies:
 
 ```bash
-# Clone the repository
-git clone [your-repo-url]
-
-# Install dependencies
 npm install
+```
 
-# Start development server
+### Development
+
+Start the development server with HMR:
+
+```bash
 npm run dev
 ```
 
-## 📚 Documentation
+Your application will be available at `http://localhost:5173`.
 
-For detailed documentation about the features and components, please visit our [documentation](docs/README.md).
+## Building for Production
 
-## 📄 License
+Create a production build:
 
-MIT License - feel free to use this template for your projects!
+```bash
+npm run build
+```
+
+## Deployment
+
+### Docker Deployment
+
+This template includes three Dockerfiles optimized for different package managers:
+
+- `Dockerfile` - for npm
+- `Dockerfile.pnpm` - for pnpm
+- `Dockerfile.bun` - for bun
+
+To build and run using Docker:
+
+```bash
+# For npm
+docker build -t my-app .
+
+# For pnpm
+docker build -f Dockerfile.pnpm -t my-app .
+
+# For bun
+docker build -f Dockerfile.bun -t my-app .
+
+# Run the container
+docker run -p 3000:3000 my-app
+```
+
+The containerized application can be deployed to any platform that supports Docker, including:
+
+- AWS ECS
+- Google Cloud Run
+- Azure Container Apps
+- Digital Ocean App Platform
+- Fly.io
+- Railway
+
+### DIY Deployment
+
+If you're familiar with deploying Node applications, the built-in app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
+
+```
+├── package.json
+├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── build/
+│   ├── client/    # Static assets
+│   └── server/    # Server-side code
+```
+
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+
+---
+
+Built with ❤️ using React Router.
