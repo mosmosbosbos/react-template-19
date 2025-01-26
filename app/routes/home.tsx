@@ -10,6 +10,7 @@ export function meta({ }: Route.MetaArgs) {
 export default function Home() {
   return (
     <div>
+      <ModeToggle/>
       <Button>Welcome To France</Button>
     </div>
   );

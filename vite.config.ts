@@ -17,7 +17,7 @@ export default defineConfig({
     Unimport.vite({
       presets: ['react', 'react-router'],
       dts: true,
-      dirs:['./app/components/ui/**'],
+      dirs:['./app/components/ui/**','./app/components/**'],
 
       // { name: 'useState', as: 'useSignal', from: 'react' },
 
